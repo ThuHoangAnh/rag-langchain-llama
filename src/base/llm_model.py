@@ -1,6 +1,9 @@
+import os
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 from langchain_community.llms import HuggingFacePipeline
+
+token = os.getenv("HF_TOKEN")
 
 
 def get_hf_llm(
@@ -11,12 +14,16 @@ def get_hf_llm(
 
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
+        token=token,
         low_cpu_mem_usage=True,
         device_map="auto",
         torch_dtype=torch.float16
     )
 
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(
+        model_name,
+        token=token
+    )
 
     model_pipeline = pipeline(
         "text-generation",
