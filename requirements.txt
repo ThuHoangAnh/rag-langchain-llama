@@ -1,4 +1,4 @@
-torch==2.8.0
+torch==2.2.2
 transformers==4.50.3
 accelerate==0.28.0
 #bitsandbytes==0.43.0 
@@ -12,8 +12,8 @@ beautifulsoup4==4.12.3
 httpx==0.23.3
 langserve==0.0.30
 chromadb==0.4.24 
-langchain-chroma
-faiss-cpu 
+langchain-chroma==0.1.0
+faiss-cpu==1.8.0
 rapidocr-onnxruntime==1.3.16 
 unstructured==0.13.2
 fastapi==0.115.12
