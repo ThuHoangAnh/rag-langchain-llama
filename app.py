@@ -98,8 +98,7 @@ with gr.Blocks(css=css, theme=gr.themes.Soft()) as demo:
         with gr.Column(scale=1):
             answer = gr.Textbox(
                 label="Answer",
-                lines=12,
-                show_copy_button=True
+                lines=12
             )
 
     submit_btn.click(
