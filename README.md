@@ -14,7 +14,7 @@ short_description: RAG system using LangChain and Llama
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
 
 
-# 🤖 RAG LangChain Llama
+# RAG LangChain Llama
 
 A Retrieval-Augmented Generation (RAG) application built using LangChain, Gradio, and Llama models.
 
